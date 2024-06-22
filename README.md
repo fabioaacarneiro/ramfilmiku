@@ -8,5 +8,7 @@
 * Toda engenharia por tras do projeto segue a estratégia FP (Funcionar Primeiro).
 * E somente uma regra, não tem regra senão FP.
 
-  ** Projeto para minha diversão e lazer.
-  ** Att. Fabio Carneiro.
+***
+  *Projeto para minha diversão e lazer.*
+  *Att. Fabio Carneiro.*
+***
