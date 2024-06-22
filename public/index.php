@@ -1,17 +1,13 @@
 <?php
 
+require_once "../vendor/autoload.php";
 
-try {
-    $connection = new mysqli("localhost", "root", "", "phpmysqli");
-} catch (\Exception $e) {
-    var_dump("Houve um erro ao conectar com o bando de dados:\n>> {$e->getMessage()}");
-    var_dump("Aviso: {$connection->connect_error}");
-}
-
+use Src\Connection;
 
 try {
     $sql = "select * from clientes;";
-    $data = $connection->query($sql);
+    $conn = Connection::getConnection();
+    $data = $conn->query($sql);
 
     try {
         while ($client = $data->fetch_object()) {
