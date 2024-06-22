@@ -36,10 +36,8 @@ final class Connection
     {
         if (is_null(static::$conn)) {
             static::connect();
-        } else {
             static::getConnection();
         }
-
 
         return static::$conn;
     }
