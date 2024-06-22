@@ -6,10 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit3949fdeb7e7b810a6e649499a88b388a
 {
+    public static $files = array (
+        '3f0460b8b8adb9f001cc0e0f4e09593e' => __DIR__ . '/../..' . '/src/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
             'Src\\' => 4,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
@@ -18,11 +26,14 @@ class ComposerStaticInit3949fdeb7e7b810a6e649499a88b388a
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Src\\Connection' => __DIR__ . '/../..' . '/src/Connection.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

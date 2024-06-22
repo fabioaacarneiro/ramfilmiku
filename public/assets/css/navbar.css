@@ -1,0 +1,21 @@
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    background: thistle;
+    font-size: .9rem;
+    font-weight: bold;
+    list-style: none;
+}
+
+.navbar a {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}

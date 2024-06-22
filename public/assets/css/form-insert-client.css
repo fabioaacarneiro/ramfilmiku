@@ -1,0 +1,27 @@
+.form-insert-client {
+    width: 100vw;
+    margin-top: 5rem;
+}
+
+.form-insert-client form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.form-insert-client label,
+button {
+    margin-top: 1rem;
+}
+
+.form-insert-client input,
+button {
+    padding: .5rem;
+}
+
+.form-insert-client input:hover,
+button:hover {
+    cursor: pointer;
+}

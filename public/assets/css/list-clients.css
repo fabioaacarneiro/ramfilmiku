@@ -1,0 +1,27 @@
+.table-clients {
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    width: 90%;
+}
+
+.table-clients thead {
+    background-color: lightsteelblue;
+}
+
+.table-clients td {
+    padding: .4rem;
+    text-align: center;
+}
+
+.table-clients tbody tr:nth-child(odd) {
+    background: lightpink;
+}
+
+.table-clients tbody tr:nth-child(even) {
+    background: rgb(251, 202, 210);
+}
+
+tr {
+    width: 100%;
+    margin: 0 auto;
+}

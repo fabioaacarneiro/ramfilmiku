@@ -2,8 +2,12 @@
     "name": "fabio/classic",
     "autoload": {
         "psr-4": {
-            "Src\\": "src/"
-        }
+            "Src\\": "src/",
+            "App\\": "app/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
     },
     "authors": [
         {
