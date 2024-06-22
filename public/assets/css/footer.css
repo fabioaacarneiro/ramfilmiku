@@ -1,22 +1,23 @@
-.navbar ul {
+footer {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     height: 5vh;
     justify-content: center;
     align-items: center;
-    color: rgb(235, 238, 255);
     background: rgba(0, 0, 0, .8);
     font-size: .9rem;
     font-weight: bold;
     list-style: none;
+    margin-top: 10vh;
+    color: rgb(235, 238, 255);
 }
 
-.navbar a {
-    color: rgb(235, 238, 255);
+footer a {
+    color: rgb(50, 243, 130);
     text-decoration: none;
 }
 
-.navbar a:hover {
+footer a:hover {
     text-decoration: underline;
 }

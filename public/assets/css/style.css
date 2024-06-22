@@ -1,6 +1,8 @@
 @import url("./form-insert-client.css");
 @import url("./navbar.css");
 @import url("./list-clients.css");
+@import url("./footer.css");
+@import url("./conteudos.css");
 
 * {
     padding: 0;
@@ -11,4 +13,5 @@
 
 body {
     width: 100vw;
+    height: 100vh;
 }
