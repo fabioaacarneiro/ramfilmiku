@@ -1,58 +1,33 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-$(document).ready(() => {
-    // alimentar o select de gêneros
-    $.ajax({
-        url: '../includes/optionsData.php/?option=generos',
-        dataType: 'json',
-        success: function (data) {
-            $.each(data, function (index, genero) {
-                $('#generos').append('<option value="' + genero.id + '">' + genero.nome + '</option>')
-            })
-        },
-        error: function () {
-            alert('Erro ao carregar os gêneros')
-        }
-    })
+    const optionDataHandler = (select, table, nameError) => {
+        fetch(`../includes/optionsData.php/?option=${table}`).then((res) => {
+            if (!res.ok) {
+                console.error(`Erro ao carregar os ${nameError}`);
+            }
+            return res.json()
+        }).then((data) => {
+            data.forEach(dataItem => {
+                const option = document.createElement('option')
 
-    // alimentar o select de países
-    $.ajax({
-        url: '../includes/optionsData.php/?option=pais',
-        dataType: 'json',
-        success: function (data) {
-            $.each(data, function (index, pais) {
-                $('#pais').append('<option value="' + pais.id + '">' + pais.nome + '</option>')
-            })
-        },
-        error: function () {
-            alert('Erro ao carregar países')
-        }
-    })
+                if (table === "classificacao_etaria") {
+                    option.value = dataItem.codigo
+                    option.textContent = dataItem.descricao
+                } else {
+                    option.value = dataItem.id
+                    option.textContent = dataItem.nome
+                }
 
-    // alimentar o select de tipos
-    $.ajax({
-        url: '../includes/optionsData.php/?option=tipos',
-        dataType: 'json',
-        success: function (data) {
-            $.each(data, function (index, tipos) {
-                $('#tipos').append('<option value="' + tipos.id + '">' + tipos.nome + '</option>')
-            })
-        },
-        error: function () {
-            alert('Erro ao carregar os tipos')
-        }
-    })
+                document.querySelector(select).appendChild(option)
+            });
+        }).catch((err) => {
+            alert(err.message)
+        })
+    }
 
-    // alimentar o select de classficação etária
-    $.ajax({
-        url: '../includes/optionsData.php/?option=classificacao_etaria',
-        dataType: 'json',
-        success: function (data) {
-            $.each(data, function (index, classificacaoEtaria) {
-                $('#classificacao_etaria').append('<option value="' + classificacaoEtaria.codigo + '">' + classificacaoEtaria.descricao + '</option>')
-            })
-        },
-        error: function () {
-            alert('Erro ao carregar os classificação etária')
-        }
-    })
+    optionDataHandler("#generos", "generos", "gêneros")
+    optionDataHandler("#pais", "pais", "pais")
+    optionDataHandler("#tipos", "tipos", "tipos")
+    optionDataHandler("#classificacao_etaria", "classificacao_etaria", "classificacao_etaria")
+
 })
