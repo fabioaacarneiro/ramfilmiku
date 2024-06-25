@@ -2,7 +2,7 @@
 $(document).ready(() => {
     // alimentar o select de gêneros
     $.ajax({
-        url: '../includes/buscarGeneros.php',
+        url: '../includes/optionsData.php/?option=generos',
         dataType: 'json',
         success: function (data) {
             $.each(data, function (index, genero) {
@@ -16,7 +16,7 @@ $(document).ready(() => {
 
     // alimentar o select de países
     $.ajax({
-        url: '../includes/buscarPais.php',
+        url: '../includes/optionsData.php/?option=pais',
         dataType: 'json',
         success: function (data) {
             $.each(data, function (index, pais) {
@@ -30,7 +30,7 @@ $(document).ready(() => {
 
     // alimentar o select de tipos
     $.ajax({
-        url: '../includes/buscarTipos.php',
+        url: '../includes/optionsData.php/?option=tipos',
         dataType: 'json',
         success: function (data) {
             $.each(data, function (index, tipos) {
@@ -44,7 +44,7 @@ $(document).ready(() => {
 
     // alimentar o select de classficação etária
     $.ajax({
-        url: '../includes/buscarClassificacaoEtaria.php',
+        url: '../includes/optionsData.php/?option=classificacao_etaria',
         dataType: 'json',
         success: function (data) {
             $.each(data, function (index, classificacaoEtaria) {

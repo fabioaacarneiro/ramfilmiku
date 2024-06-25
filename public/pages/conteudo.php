@@ -1,12 +1,12 @@
 <?php
 
-use App\repository\BuscarConteudos;
+use App\controllers\Conteudo;
 
 include_once "../../vendor/autoload.php";
 include_once "../../app/resources/partials/header.php";
 include_once "../../app/resources/partials/navbar.php";
 
-$conteudos = BuscarConteudos::getConteudo();
+$conteudos = Conteudo::findAllConteudo();
 
 ?>
 
