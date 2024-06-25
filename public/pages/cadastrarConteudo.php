@@ -4,7 +4,6 @@ include_once "../../app/resources/partials/header.php";
 include_once "../../app/resources/partials/navbar.php";
 
 $cadastrarConteudo = include_once "../../app/repository/cadastrarConteudo.php";
-$buscarGeneros = include_once "../../app/repository/buscarGeneros.php";
 
 ?>
 
